@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{578D3500-7778-486D-8FB1-9D89118436E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HardwareNet.Presentacion.WindowsForms</RootNamespace>
+    <AssemblyName>HardwareNet.Presentacion.WindowsForms</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.20.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.20.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.5.0.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.5.0\lib\netstandard2.0\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.7.0.0\lib\net462\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.7.0.0\lib\net462\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioBase.Designer.cs">
+      <DependentUpon>FormularioBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioCarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioCarga.Designer.cs">
+      <DependentUpon>FormularioCarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioCategoriaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioCategoriaProducto.Designer.cs">
+      <DependentUpon>FormularioCategoriaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioCategoriaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioCategoriaProveedor.Designer.cs">
+      <DependentUpon>FormularioCategoriaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioCliente.Designer.cs">
+      <DependentUpon>FormularioCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioControlProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioControlProducto.Designer.cs">
+      <DependentUpon>FormularioControlProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioControlProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioControlProveedor.Designer.cs">
+      <DependentUpon>FormularioControlProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioEmpleado.Designer.cs">
+      <DependentUpon>FormularioEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioInformacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioInformacion.Designer.cs">
+      <DependentUpon>FormularioInformacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioLogin.Designer.cs">
+      <DependentUpon>FormularioLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioMarcaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioMarcaProducto.Designer.cs">
+      <DependentUpon>FormularioMarcaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioPanelPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioPanelPrincipal.Designer.cs">
+      <DependentUpon>FormularioPanelPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioProducto.Designer.cs">
+      <DependentUpon>FormularioProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioControlReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioControlReporte.Designer.cs">
+      <DependentUpon>FormularioControlReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioProveedor.Designer.cs">
+      <DependentUpon>FormularioProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioSubcategoriaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Formulario\FormularioSubcategoriaProducto.Designer.cs">
+      <DependentUpon>FormularioSubcategoriaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Reporte\Formulario\ReporteMarcaProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Reporte\Formulario\ReporteMarcaProducto.Designer.cs">
+      <DependentUpon>ReporteMarcaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Reporte\Formulario\ReporteSuministro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Reporte\Formulario\ReporteSuministro.Designer.cs">
+      <DependentUpon>ReporteSuministro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsForms.Reporte\Formulario\ReporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WindowsForms.Reporte\Formulario\ReporteVenta.Designer.cs">
+      <DependentUpon>ReporteVenta.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioBase.resx">
+      <DependentUpon>FormularioBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioCarga.resx">
+      <DependentUpon>FormularioCarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioCategoriaProducto.resx">
+      <DependentUpon>FormularioCategoriaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioCategoriaProveedor.resx">
+      <DependentUpon>FormularioCategoriaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioCliente.resx">
+      <DependentUpon>FormularioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioControlProducto.resx">
+      <DependentUpon>FormularioControlProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioControlProveedor.resx">
+      <DependentUpon>FormularioControlProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioEmpleado.resx">
+      <DependentUpon>FormularioEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioInformacion.resx">
+      <DependentUpon>FormularioInformacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioLogin.resx">
+      <DependentUpon>FormularioLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioMarcaProducto.resx">
+      <DependentUpon>FormularioMarcaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioPanelPrincipal.resx">
+      <DependentUpon>FormularioPanelPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioProducto.resx">
+      <DependentUpon>FormularioProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioControlReporte.resx">
+      <DependentUpon>FormularioControlReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioProveedor.resx">
+      <DependentUpon>FormularioProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Formulario\FormularioSubcategoriaProducto.resx">
+      <DependentUpon>FormularioSubcategoriaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Reporte\Formulario\ReporteMarcaProducto.resx">
+      <DependentUpon>ReporteMarcaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Reporte\Formulario\ReporteSuministro.resx">
+      <DependentUpon>ReporteSuministro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WindowsForms.Reporte\Formulario\ReporteVenta.resx">
+      <DependentUpon>ReporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="WindowsForms.Reporte\RDLC\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
+    <None Include="WindowsForms.Imagen\24px\informacion.png" />
+    <None Include="WindowsForms.Imagen\512px\img_marcas.png" />
+    <None Include="WindowsForms.Imagen\512px\img_suministros.png" />
+    <None Include="WindowsForms.Imagen\512px\img_empleados.png" />
+    <None Include="WindowsForms.Imagen\512px\img_proveedores.png" />
+    <None Include="WindowsForms.Imagen\512px\img_clientes.png" />
+    <None Include="WindowsForms.Imagen\512px\img_productos.png" />
+    <None Include="WindowsForms.Imagen\512px\img_categorias.png" />
+    <None Include="WindowsForms.Imagen\512px\img_ventas.png" />
+    <None Include="WindowsForms.Imagen\24px\icono_buenos_dias_y_buen_provecho.png" />
+    <None Include="WindowsForms.Imagen\24px\reloj.png" />
+    <None Include="WindowsForms.Imagen\24px\calendario.png" />
+    <None Include="WindowsForms.Imagen\24px\icono_buenos_dias.png" />
+    <None Include="WindowsForms.Imagen\24px\icono_buenas_tardes.png" />
+    <None Include="WindowsForms.Imagen\24px\icono_buenas_noches.png" />
+    <None Include="WindowsForms.Imagen\16px\carrito-de-compras.png" />
+    <None Include="WindowsForms.Imagen\16px\buscar.png" />
+    <None Include="WindowsForms.Imagen\16px\pdf-pequeño.png" />
+    <None Include="WindowsForms.Imagen\16px\producto-pequeño.png" />
+    <None Include="WindowsForms.Imagen\16px\marca-pequeña.png" />
+    <None Include="WindowsForms.Imagen\16px\subcaja.png" />
+    <None Include="WindowsForms.Imagen\16px\proveedores.png" />
+    <None Include="WindowsForms.Imagen\16px\categoria-proveedor.png" />
+    <None Include="WindowsForms.Imagen\16px\caja.png" />
+    <None Include="WindowsForms.Imagen\32px\eliminar.png" />
+    <None Include="WindowsForms.Imagen\32px\editar.png" />
+    <None Include="WindowsForms.Imagen\32px\agregar.png" />
+    <None Include="WindowsForms.Imagen\32px\adjuntar.png" />
+    <None Include="WindowsForms.Imagen\16px\retornar.png" />
+    <None Include="WindowsForms.Imagen\16px\guardar.png" />
+    <None Include="WindowsForms.Imagen\16px\excel.png" />
+    <None Include="WindowsForms.Imagen\16px\cancelar.png" />
+    <None Include="WindowsForms.Imagen\24px\venta.png" />
+    <None Include="WindowsForms.Imagen\24px\usuario.png" />
+    <None Include="WindowsForms.Imagen\24px\reporte.png" />
+    <None Include="WindowsForms.Imagen\24px\registro.png" />
+    <None Include="WindowsForms.Imagen\24px\proveedor.png" />
+    <None Include="WindowsForms.Imagen\24px\producto.png" />
+    <None Include="WindowsForms.Imagen\24px\marca.png" />
+    <None Include="WindowsForms.Imagen\24px\compra.png" />
+    <None Include="WindowsForms.Imagen\24px\cliente.png" />
+    <None Include="WindowsForms.Imagen\24px\categoria.png" />
+    <None Include="WindowsForms.Imagen\24px\rol.png" />
+    <None Include="WindowsForms.Imagen\24px\empleado.png" />
+    <None Include="WindowsForms.Imagen\512px\Background.jpg" />
+    <None Include="WindowsForms.Imagen\24px\inicio.png" />
+    <None Include="WindowsForms.Imagen\24px\configuraciones.png" />
+    <None Include="WindowsForms.Imagen\24px\cerrar.png" />
+    <None Include="WindowsForms.Imagen\512px\login-log.png" />
+    <None Include="WindowsForms.Imagen\512px\login-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HardwareNet.Entidad\HardwareNet.Entidad.csproj">
+      <Project>{d059e8fe-bd0b-4b2d-b690-333c1428c925}</Project>
+      <Name>HardwareNet.Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HardwareNet.Negocio.Servicio\HardwareNet.Negocio.Servicio.csproj">
+      <Project>{84699eda-43be-4b9a-8ed2-33a627e31168}</Project>
+      <Name>HardwareNet.Negocio.Servicio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
+</Project>
