@@ -1,42 +1,33 @@
-﻿using System.Data;
+﻿using HardwareNet.Datos.Connexion;
 using System;
-using Devart.Data.Oracle;
-using HardwareNet.Entidad;
-using HardwareNet.Negocio.Servicio;
+using System.Data.OracleClient;
 
 namespace HardwareNET.Test.Consola
 {
     internal class Program
     {
+        [Obsolete]
         static void Main(string[] args)
         {
-            MarcaProducto marca = new MarcaProducto
+            try
             {
-                IdMarcaProducto = 1,
-                Nombre = "Marca de prueba",
-                FechaCreacion = DateTime.Now,
-                FechaModificacion = DateTime.Now,
-                Estado = true
-            };
-
-            int resultado = 0;
-            string mensaje = string.Empty;
-
-            // Llamamos al método Crear
-            resultado = new MarcaProductoService().Crear(marca, out mensaje);
-
-            // Verificamos el resultado
-            if (resultado > 1)
-            {
-                Console.WriteLine("Marca creada correctamente");
+                using (OracleConnection connection = new OracleConnection(ConexionMaestra.CadenaConexion))
+                {
+                    connection.Open();
+                    Console.WriteLine("Conectado");
+                    Console.ReadKey();
+                }
             }
-            else
+            catch (OracleException ex)
             {
-                Console.WriteLine($"Error al crear marca: {mensaje}");
-                Console.WriteLine($"Id: {marca.IdMarcaProducto}");
+                // Manejo de excepciones específicas de Oracle
+                Console.WriteLine("Error de Oracle: " + ex.Message);
             }
-
-            Console.ReadKey();
+            catch (Exception ex)
+            {
+                // Manejo de excepciones generales
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
     }
 }
