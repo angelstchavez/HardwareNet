@@ -31,6 +31,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0681AFFA-0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HardwareNET.Test.Consola", "HardwareNET.Test.Consola\HardwareNET.Test.Consola.csproj", "{E2708727-77EF-4370-AAF1-D2A528057DDA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{495A9EBC-3FC0-4F2A-BD68-557E9377EA1F}"
+	ProjectSection(SolutionItems) = preProject
+		HardwareNet.OracleQuery.sql = HardwareNet.OracleQuery.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +87,7 @@ Global
 		{84699EDA-43BE-4B9A-8ED2-33A627E31168} = {93DDE294-C282-40EA-A575-3E78A6EE6CAF}
 		{578D3500-7778-486D-8FB1-9D89118436E4} = {4435396D-43A5-472E-83A1-D1F1E3352FE2}
 		{E2708727-77EF-4370-AAF1-D2A528057DDA} = {0681AFFA-009F-4229-8D96-5898E492B2DA}
+		{495A9EBC-3FC0-4F2A-BD68-557E9377EA1F} = {C6906D3C-758F-4E43-8305-A0A6D327EB68}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AFDA6195-D185-42E6-8BF8-F45EB2C32267}
